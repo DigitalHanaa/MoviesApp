@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import FilmDetails from './FilmDetails';
+import FilmListing from './FilmListing';
+import allFilms from './TMDB';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//const movies = allFilms.films[0];
+// const todoItems = allFilms.films.map((item, key) => (
+//   // film-row comp.
+//   <p key={key}>{item.title}
+//   </p>
+
+//   ))
+export default class Film extends Component {
+  render() {
+
+    return (
+      <div className="film-library">
+
+            <FilmListing
+              films={allFilms.films}
+            />
+   
+        <div className="film-details">
+          <h1 className="section-title">DETAILS</h1>
+        </div>
+      </div>
+    )
+  }
 }
-
-export default App;
