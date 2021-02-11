@@ -3,15 +3,9 @@ import FilmRow from './FilmRow';
 
 export default class FilmListing extends Component {
     render() {
-        let allFilms = this.props.films.map( (film, index) => 
-            // <h1 key={film.id}>{film.title}</h1>
-            <FilmRow 
-            key={film.id} 
-            title={film.title} 
-            posterUrl={film.poster_path}
-            year={film.release_date}
-            />
-        )
+        const allFilms = this.props.films.map( (filmItem, index) => {
+           return <FilmRow key={index} film={filmItem}/>
+        })
 
         return (
             <div className="film-list">
