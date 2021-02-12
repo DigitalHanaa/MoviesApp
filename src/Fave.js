@@ -11,14 +11,12 @@ export default class Fave extends Component {
     }
 
     handleClick(e){
-        /*
-            The stopPropagation() method prevents propagation of the same event from being called.
-            Propagation means bubbling up to parent elements or capturing down to child elements.
+        /* The stopPropagation() method prevents propagation of the same event from being called.
+         Propagation means bubbling up to parent elements or capturing down to child elements.
         */
         
         this.setState({
             // !this.state.isFave = which !falue = true
-            //isFave: !this.state.isFave,
             isFave: !this.state.isFave,
         })
         console.log("handling Fave click!", this.state.isFave);
